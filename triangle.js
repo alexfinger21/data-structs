@@ -18,4 +18,5 @@ const drawTringle = (a, b, c, s1) => {
 }
 
 drawTringle(50, 30, 100, 100)
+//more stuff coming
 
