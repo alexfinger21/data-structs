@@ -16,7 +16,7 @@ class dsu {
         }
 
         this.rank[i] = 1
-        return this.parent[i] = find(parent_i)
+        return this.parent[i] = this.find(parent_i)
     }
 
     union(i, j) {
@@ -38,4 +38,30 @@ class dsu {
 
         return 0
     }
+}
+
+// test
+
+const n = 5
+
+const dsu_test = new dsu(n)
+
+dsu_test.union(0, 2)
+
+// 4 is a friend of 2
+dsu_test.union(4, 2)
+
+// 3 is a friend of 1
+dsu_test.union(3, 1)
+
+if (dsu_test.find(4) == dsu_test.find(0)) {
+    console.log("Yes")
+} else {
+    console.log("No")
+}
+
+if (dsu_test.find(1) == dsu_test.find(0)) {
+    console.log("Yes")
+} else {
+    console.log("No")
 }
